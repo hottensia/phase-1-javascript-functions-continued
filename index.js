@@ -10,14 +10,12 @@ const mondayWork = function(activity='go to the office') {
 };
 console.log(mondayWork('learn'));
 
-function wrapAdjective(){
-    // return `$('You are ')*${special}*!`;
-    // return `${"You are "}||${'a dedicated programmer'}||!`;
-    return function (special = "*") {
-        return `${"You are "}*${special}*!`;
-    };   
+
+let wrapAdjective = function(style="*") {
+    return function(adjective="special") {
+      return `You are ${style}${adjective}${style}!`
+    }
   }
-  console.log(wrapAdjective()("a hard worker"));
  
 
 
